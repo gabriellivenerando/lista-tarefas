@@ -8,7 +8,7 @@ form.addEventListener("submit", function(evento){
     
     const mensagemErro = document.createElement("p")
     form.appendChild(mensagemErro)
-    mensagemErro.classList.add("print-texto-erro")g
+    mensagemErro.classList.add("print-texto-erro")
 
     const div = document.createElement("div")
     form.appendChild(div)
