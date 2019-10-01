@@ -15,9 +15,14 @@ form.addEventListener("submit", function(evento){
 
     const span = document.createElement("span")
     div.appendChild(span)
+    span.classList.add("print-span")
 
     paragrafo.textContent = inputEvento.value
 
     form.reset()
-
+    
+    span.addEventListener("click", function(){
+        div.classList.remove("print-div")
+        div.classList.add("print-div__remove")
+    })
 })
