@@ -90,6 +90,7 @@ body{
     color: grey;
     text-decoration: line-through;
     cursor: pointer;
+    font-size: 12px;
 }
 
 .print-span {
