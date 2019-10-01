@@ -56,15 +56,16 @@ form.addEventListener("submit", function (evento) {
         })
 
     btnFeito.addEventListener("click", function(){
-        if(btnFeito.classList.contains("btn-marca-tudo-como-feito")){
-            btnFeito.classList.remove("btn-marca-tudo-como-feito")
-            btnFeito.classList.add("btn-marca-tudo-como-feito-OK")
-        } else {
-            btnFeito.classList.add("btn-marca-tudo-como-feito")   
-            btnFeito.classList.remove("btn-marca-tudo-como-feito-OK")
+        if(btnFeito){
+            paragrafo.classList.remove("print-comentario")
+            paragrafo.classList.add("print-comentario__concluido")
         }
     })
 
-    }
-
+    btnApaga.addEventListener("click", function(){
+        if (btnApaga){
+            div.classList.add("print-div__remove")
+        }
+    })
+}
 })
