@@ -1,9 +1,14 @@
 const form = document.getElementById("conteudoConteiner")
 const inputEvento = document.getElementById("inputTarefa")
+const erro = document.querySelector(".print-texto-erro")
 
 form.addEventListener("submit", function (evento) {
 
     evento.preventDefault()
+    
+    const mensagemErro = document.createElement("p")
+    form.appendChild(mensagemErro)
+    mensagemErro.classList.add("print-texto-erro")
 
     if (inputEvento.value.trim() === "") {
         inputEvento.setAttribute("placeholder", "Defina uma tarefa")
