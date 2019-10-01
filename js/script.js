@@ -14,9 +14,7 @@ form.addEventListener("submit", function (evento) {
         inputEvento.setAttribute("placeholder", "Defina uma tarefa")
         inputEvento.classList.add("print-texto-erro")
     } else {
-
-        inputEvento.classList.remove("print-texto-erro")
-        
+        inputEvento.classList.remove("print-texto-erro")        
         inputEvento.setAttribute("placeholder", "Nova tarefa")
 
         const div = document.createElement("div")
@@ -27,7 +25,6 @@ form.addEventListener("submit", function (evento) {
         div.appendChild(paragrafo)
         paragrafo.classList.add("print-comentario")
 
-
         const span = document.createElement("span")
         div.appendChild(span)
         span.classList.add("print-span")
@@ -36,24 +33,20 @@ form.addEventListener("submit", function (evento) {
         paragrafo.textContent = inputEvento.value
 
         form.reset()
-
+        
         span.addEventListener("click", function () {
             div.classList.remove("print-div")
             div.classList.add("print-div__remove")
         })
         paragrafo.addEventListener("click", function(){
-
+            
             if(paragrafo.classList.contains("print-comentario")){
                 paragrafo.classList.remove("print-comentario")
                 paragrafo.classList.add("print-comentario__concluido")
             }else{
                 paragrafo.classList.add("print-comentario")
                 paragrafo.classList.remove("print-comentario__concluido")
-            }
-            
-            
+            }           
         })
-
     }
-
 })
