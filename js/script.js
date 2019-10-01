@@ -12,7 +12,12 @@ form.addEventListener("submit", function (evento) {
 
     if (inputEvento.value.trim() === "") {
         inputEvento.setAttribute("placeholder", "Defina uma tarefa")
+        inputEvento.classList.add("print-texto-erro")
     } else {
+
+        inputEvento.classList.remove("print-texto-erro")
+        
+        inputEvento.setAttribute("placeholder", "Nova tarefa")
 
         const div = document.createElement("div")
         form.appendChild(div)
