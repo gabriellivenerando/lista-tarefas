@@ -83,6 +83,13 @@ body{
 .print-comentario {
     text-align: left;
     font-size: 12px;
+    cursor: pointer;
+}
+
+.print-comentario__concluido {
+    color: grey;
+    text-decoration: line-through;
+    cursor: pointer;
 }
 
 .print-span {
@@ -93,3 +100,8 @@ body{
     cursor: pointer;
 }
 
+.print-texto-validado {
+    color: red;
+    font-size: 10px;
+    text-align: center;
+}
