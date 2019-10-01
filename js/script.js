@@ -2,7 +2,7 @@ const form = document.getElementById("conteudoConteiner")
 const inputEvento = document.getElementById("inputTarefa")
 const erro = document.querySelector(".print-texto-erro")
 
-form.addEventListener("submit", function(evento){
+form.addEventListener("submit", function (evento) {
 
     evento.preventDefault()
     
@@ -10,25 +10,33 @@ form.addEventListener("submit", function(evento){
     form.appendChild(mensagemErro)
     mensagemErro.classList.add("print-texto-erro")
 
-    const div = document.createElement("div")
-    form.appendChild(div)
-    div.classList.add("print-div")
+    if (inputEvento.value.trim() === "") {
+        inputEvento.setAttribute("placeholder", "Defina uma tarefa")
+    } else {
 
-    const paragrafo = document.createElement("p")
-    div.appendChild(paragrafo)
-    paragrafo.classList.add("print-comentario")
+        const div = document.createElement("div")
+        form.appendChild(div)
+        div.classList.add("print-div")
 
-    const span = document.createElement("span")
-    div.appendChild(span)
-    span.classList.add("print-span")
-    span.textContent = "x"
+        const paragrafo = document.createElement("p")
+        div.appendChild(paragrafo)
+        paragrafo.classList.add("print-comentario")
 
-    paragrafo.textContent = inputEvento.value
 
-    form.reset()
-    
-    span.addEventListener("click", function(){
-        div.classList.remove("print-div")
-        div.classList.add("print-div__remove")
-    })
+        const span = document.createElement("span")
+        div.appendChild(span)
+        span.classList.add("print-span")
+        span.textContent = "x"
+
+        paragrafo.textContent = inputEvento.value
+
+        form.reset()
+
+        span.addEventListener("click", function () {
+            div.classList.remove("print-div")
+            div.classList.add("print-div__remove")
+        })
+
+    }
+
 })
