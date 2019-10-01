@@ -1,6 +1,12 @@
 const form = document.getElementById("conteudoConteiner")
+
 const inputEvento = document.getElementById("inputTarefa")
+
 const erro = document.querySelector(".print-texto-erro")
+
+const btnApaga = document.getElementById("btnApaga")
+
+const btnFeito = document.getElementById("btnFeito")
 
 form.addEventListener("submit", function (evento) {
 
@@ -38,15 +44,27 @@ form.addEventListener("submit", function (evento) {
             div.classList.remove("print-div")
             div.classList.add("print-div__remove")
         })
-        paragrafo.addEventListener("click", function(){
-            
+
+        paragrafo.addEventListener("click", function(){            
             if(paragrafo.classList.contains("print-comentario")){
                 paragrafo.classList.remove("print-comentario")
                 paragrafo.classList.add("print-comentario__concluido")
-            }else{
+            } else{
                 paragrafo.classList.add("print-comentario")
                 paragrafo.classList.remove("print-comentario__concluido")
             }           
         })
+
+    btnFeito.addEventListener("click", function(){
+        if(btnFeito.classList.contains("btn-marca-tudo-como-feito")){
+            btnFeito.classList.remove("btn-marca-tudo-como-feito")
+            btnFeito.classList.add("btn-marca-tudo-como-feito-OK")
+        } else {
+            btnFeito.classList.add("btn-marca-tudo-como-feito")   
+            btnFeito.classList.remove("btn-marca-tudo-como-feito-OK")
+        }
+    })
+
     }
+
 })

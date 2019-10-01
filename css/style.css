@@ -9,7 +9,7 @@ body{
     background-size: cover;
     background-position: center;
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
+    font-size: 12px;
 }
 
 .conteudo{
@@ -129,10 +129,11 @@ body{
     margin: -20px;
     margin-top: 4px;
     margin-left: -29px;
+    font-size: 12px;
 }
 
 .btn-apaga-tudo-OK::before{
-    background-color: green;
+    background-color: red;
     cursor: pointer;
     content: "";
     display: block;
@@ -142,11 +143,13 @@ body{
     border-radius: 50%;
     margin: -20px;
     margin-top: 4px;
+    font-size: 12px;
     margin-left: -29px;
 }
 
 .btn-marca-tudo-como-feito{
     font-size: 12px;
+    cursor: pointer;    
 }
 
 .btn-marca-tudo-como-feito::before{
@@ -159,12 +162,12 @@ body{
     border-radius: 50%;
     margin: -20px;
     margin-top: 4px;
-    margin-left: -29px;   
+    margin-left: -29px;
+    font-size: 12px;   
 }
 
-
 .btn-marca-tudo-como-feito-OK::before{
-    background-color: #ff0000;
+    background-color: green;
     cursor: pointer;
     content: "";
     display: block;
@@ -175,4 +178,5 @@ body{
     margin: -20px;
     margin-top: 4px;
     margin-left: -29px;
+    font-size: 12px;
 }
