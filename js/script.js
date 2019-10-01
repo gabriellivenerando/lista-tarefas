@@ -16,6 +16,7 @@ form.addEventListener("submit", function(evento){
     const span = document.createElement("span")
     div.appendChild(span)
     span.classList.add("print-span")
+    span.textContent = "x"
 
     paragrafo.textContent = inputEvento.value
 

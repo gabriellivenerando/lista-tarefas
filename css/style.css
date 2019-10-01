@@ -80,12 +80,16 @@ body{
     display: none;
 }
 
-
 .print-comentario {
     text-align: left;
     font-size: 12px;
 }
 
 .print-span {
-
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
 }
+
