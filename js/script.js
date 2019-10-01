@@ -5,7 +5,7 @@ const erro = document.querySelector(".print-texto-erro")
 form.addEventListener("submit", function (evento) {
 
     evento.preventDefault()
-    
+
     const mensagemErro = document.createElement("p")
     form.appendChild(mensagemErro)
     mensagemErro.classList.add("print-texto-erro")
@@ -16,7 +16,7 @@ form.addEventListener("submit", function (evento) {
     } else {
 
         inputEvento.classList.remove("print-texto-erro")
-        
+
         inputEvento.setAttribute("placeholder", "Nova tarefa")
 
         const div = document.createElement("div")
@@ -41,18 +41,19 @@ form.addEventListener("submit", function (evento) {
             div.classList.remove("print-div")
             div.classList.add("print-div__remove")
         })
-        paragrafo.addEventListener("click", function(){
+        paragrafo.addEventListener("click", function () {
 
-            if(paragrafo.classList.contains("print-comentario")){
+            if (paragrafo.classList.contains("print-comentario")) {
                 paragrafo.classList.remove("print-comentario")
                 paragrafo.classList.add("print-comentario__concluido")
-            }else{
+            } else {
                 paragrafo.classList.add("print-comentario")
                 paragrafo.classList.remove("print-comentario__concluido")
             }
-            
-            
         })
+        // const botoes = 
+        // const btnApagaTudo = document.createElement("button")
+        
 
     }
 
