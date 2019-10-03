@@ -1,31 +1,27 @@
 const form = document.getElementById("conteudoConteiner")
-
 const inputEvento = document.getElementById("inputTarefa")
-
 const erro = document.querySelector(".print-texto-erro")
-
 const btnApaga = document.getElementById("btnApaga")
-
 const btnFeito = document.getElementById("btnFeito")
 
-form.addEventListener("submit", function (evento) {
-
+form.addEventListener("submit", function(evento){
     evento.preventDefault()
 
     const mensagemErro = document.createElement("p")
     form.appendChild(mensagemErro)
     mensagemErro.classList.add("print-texto-erro")
 
-    if (inputEvento.value.trim() === "") {
+    if (inputEvento.value.trim() === ""){
         inputEvento.setAttribute("placeholder", "Defina uma tarefa")
         inputEvento.classList.add("print-texto-erro")
-    } else {
+    } else{
         inputEvento.classList.remove("print-texto-erro")        
         inputEvento.setAttribute("placeholder", "Nova tarefa")
 
         const div = document.createElement("div")
         form.appendChild(div)
         div.classList.add("print-div")
+        div.setAttribute("draggable", "true")
 
         const paragrafo = document.createElement("p")
         div.appendChild(paragrafo)
@@ -40,7 +36,7 @@ form.addEventListener("submit", function (evento) {
 
         form.reset()
         
-        span.addEventListener("click", function () {
+        span.addEventListener("click", function(){
             div.classList.remove("print-div")
             div.classList.add("print-div__remove")
         })
@@ -63,7 +59,7 @@ form.addEventListener("submit", function (evento) {
     })
 
     btnApaga.addEventListener("click", function(){
-        if (btnApaga){
+        if(btnApaga){
             div.classList.add("print-div__remove")
         }
     })
