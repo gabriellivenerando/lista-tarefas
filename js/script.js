@@ -3,13 +3,11 @@ const inputEvento = document.getElementById("inputTarefa")
 const erro = document.querySelector(".print-texto-erro")
 const btnApaga = document.getElementById("btnApaga")
 const btnFeito = document.getElementById("btnFeito")
+const divDrag = document.getElementById("drag")
+
 
 form.addEventListener("submit", function(evento){
     evento.preventDefault()
-
-    const mensagemErro = document.createElement("p")
-    form.appendChild(mensagemErro)
-    mensagemErro.classList.add("print-texto-erro")
 
     if (inputEvento.value.trim() === ""){
         inputEvento.setAttribute("placeholder", "Defina uma tarefa")
@@ -19,16 +17,25 @@ form.addEventListener("submit", function(evento){
         inputEvento.setAttribute("placeholder", "Nova tarefa")
 
         const div = document.createElement("div")
-        form.appendChild(div)
         div.classList.add("print-div")
-        div.setAttribute("draggable", "true")
-
+        drag.className = "print-drag"
+        drag.appendChild(div)
+        
         const paragrafo = document.createElement("p")
         div.appendChild(paragrafo)
         paragrafo.classList.add("print-comentario")
 
+        const divEditar = document.createElement("div")
+        divEditar.classList.add("editar-tarefa__div")
+        div.appendChild(divEditar)
+        
+        const editarTarefa = document.createElement("p")
+        editarTarefa.classList.add("editar-tarefa__p")
+        divEditar.appendChild(editarTarefa)
+        editarTarefa.textContent = "editar"
+
         const span = document.createElement("span")
-        div.appendChild(span)
+        divEditar.appendChild(span)
         span.classList.add("print-span")
         span.textContent = "x"
 
@@ -51,17 +58,36 @@ form.addEventListener("submit", function(evento){
             }           
         })
 
-    btnFeito.addEventListener("click", function(){
-        if(btnFeito){
-            paragrafo.classList.remove("print-comentario")
-            paragrafo.classList.add("print-comentario__concluido")
-        }
-    })
+        btnFeito.addEventListener("click", function(){
+            if(btnFeito){
+                paragrafo.classList.remove("print-comentario")
+                paragrafo.classList.add("print-comentario__concluido")
+            }
+        })
 
-    btnApaga.addEventListener("click", function(){
-        if(btnApaga){
-            div.classList.add("print-div__remove")
-        }
-    })
-}
+        btnApaga.addEventListener("click", function(){
+            if(btnApaga){
+                div.classList.add("print-div__remove")
+            }
+        })   
+        
+        editarTarefa.addEventListener("click", function(){
+            if(editarTarefa){
+            paragrafo.classList.remove("print-comentario")
+            paragrafo.classList.add("print-comentario__remove")
+            span.classList.remove("print-span")
+            span.classList.add("print-span__remove")
+            editarTarefa.classList.remove("editar-tarefa__p")
+            editarTarefa.classList.add("editar-tarefa__p-remove")
+            
+            const editarInput = document.createElement("input")
+            editarInput.setAttribute("type", "text")
+            editarInput.classList.add("editar-tarefa__input")
+            div.appendChild(editarInput)
+
+            paragrafo.textContent = editarInput.value
+            paragrafo.classList.add("print-comentario")
+            } 
+        })
+    }
 })

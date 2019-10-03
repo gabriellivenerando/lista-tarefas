@@ -91,15 +91,18 @@ body{
     color: grey;
     text-decoration: line-through;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 12px;  
 }
 
 .print-span {
-    color: black;
+    color: rgb(53, 53, 53);    
     font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    font-size: 15px;
     cursor: pointer;
+    font-weight: bold;
+}
+
+.print-span__remove{
+    display: none;
 }
 
 .print-texto-erro::placeholder {
@@ -112,6 +115,8 @@ body{
     margin-top: 30px;
     display: flex;
     justify-content: space-around;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #afaeae;    
 }
 
 .btn-apaga-tudo {
@@ -151,4 +156,31 @@ body{
     margin-top: 4px;
     margin-left: -29px;
     font-size: 12px;   
+}
+
+.editar-tarefa__p {
+    color: rgb(99, 99, 99);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.editar-tarefa__p-remove {
+    display: none;
+}
+
+.editar-tarefa__div {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.editar-tarefa__input {
+    border: 1px solid #afaeae;
+    background-color: #d4d4d4; 
+    padding: 10px;
+    width: 100%;
+}
+
+.print-comentario__remove {
+    display: none;
 }
