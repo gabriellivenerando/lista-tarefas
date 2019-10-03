@@ -88,6 +88,7 @@ form.addEventListener("submit", function(evento){
             paragrafo.textContent = editarInput.value
             paragrafo.classList.add("print-comentario")
             } 
-        })
+        })      
+
     }
 })

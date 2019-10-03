@@ -15,8 +15,21 @@
             <h1 class="conteudo__conteiner-titulo">
                 Adicione uma tarefa
             </h1>
-            <input type="text" class="conteudo__conteiner-input" placeholder="Nova tarefa" id="inputTarefa">
-            <button class="conteudo__conteiner-call-to-action" id="btnAdicionaTarefa">Add</button>
+            <div class="input-principal">
+                <input type="text" class="conteudo__conteiner-input" placeholder="Nova tarefa" id="inputTarefa">
+            </div>
+            <div class="div-opcoes">
+            <label class="opcoes" for="opcoes-etiqueta">
+                <select name="opcoes-etiqueta" id="etiqueta">
+                    <option id="desativado" checked disabled value="selecionaEtiqueta">Selecione uma etiqueta</option>
+                    <option value="alimentacao">Alimentação</option>
+                    <option value="compras">Compras</option>
+                    <option value="contas">Contas</option>
+                    <option value="moradia">Moradia</option>
+                </select>
+            </label>
+            <button class="conteudo__conteiner-call-to-action" id="btnAdicionaTarefa">Adicionar</button>
+            </div>
             <div class="botoes" id="botoesLimpaApaga">
                 <p class="btn-marca-tudo-como-feito" id="btnFeito">Tudo feito</p>
                 <p class="btn-apaga-tudo" id="btnApaga">Apaga tudo</p>

@@ -37,11 +37,8 @@ body{
 }
 
 .conteudo__conteiner-input{
-    width: 100%;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
-    border-top: 1px solid #afaeae;
+    width: 315px;
+    border: 1px solid #afaeae;
     height: 100px;
     padding: 10px;
 }
@@ -54,15 +51,20 @@ body{
 }
 
 .conteudo__conteiner-call-to-action {
-    width: 100%;
+    width: 132px;
+    border-radius: 5px;
     border: none;
     color: #ffffff;
     font-weight: bold;
-    text-transform: uppercase;
     background-color: #ba7af8;
-    padding: 15px;
+    padding: 5px;
+    margin-right: 8px;
     font-size: 15px;
     cursor: pointer;
+}
+
+#desativado {
+    color: white;
 }
 
 .conteudo__conteiner-call-to-action:hover{
@@ -183,4 +185,39 @@ body{
 
 .print-comentario__remove {
     display: none;
+}
+
+.div-opcoes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+}
+
+.input-principal {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 30px;
+}
+
+select {
+    cursor: pointer;
+    border: none;
+    width: 90%;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    padding: 4px;
+    font-size: 14px;
+    background-color: #ba7af8;
+}
+
+select > option {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
