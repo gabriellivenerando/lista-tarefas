@@ -74,10 +74,12 @@ form.addEventListener("submit", function(evento){
         btnApaga.addEventListener("click", function(){
             if(btnApaga){
                 div.classList.add("print-div__remove")
-            }
+            } 
         })   
 
-        
+        editarTarefa.addEventListener("dblclick", function(){
+            paragrafo.setAttribute("contentEditable", "true")
+        })
         
         // FUNÇÃO PARA ADICIONAR O EDITAR
         // editarTarefa.addEventListener("click", function(){
