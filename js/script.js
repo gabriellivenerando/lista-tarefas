@@ -12,7 +12,7 @@ form.addEventListener("submit", function(evento){
     if (inputEvento.value.trim() === ""){
         inputEvento.setAttribute("placeholder", "Defina uma tarefa")
         inputEvento.classList.add("print-texto-erro")
-    } else{
+    } else {
         inputEvento.classList.remove("print-texto-erro")        
         inputEvento.setAttribute("placeholder", "Nova tarefa")
 
@@ -24,6 +24,12 @@ form.addEventListener("submit", function(evento){
         const paragrafo = document.createElement("p")
         div.appendChild(paragrafo)
         paragrafo.classList.add("print-comentario")
+
+        let valorEtiqueta = document.getElementById("etiqueta")
+        let paragrafoEtiqueta = document.createElement("p")
+        div.appendChild(paragrafoEtiqueta)
+        paragrafoEtiqueta.textContent = valorEtiqueta.value
+        paragrafoEtiqueta.classList.add("etiquetas")
 
         const divEditar = document.createElement("div")
         divEditar.classList.add("editar-tarefa__div")
@@ -70,25 +76,27 @@ form.addEventListener("submit", function(evento){
                 div.classList.add("print-div__remove")
             }
         })   
+
         
-        editarTarefa.addEventListener("click", function(){
-            if(editarTarefa){
-            paragrafo.classList.remove("print-comentario")
-            paragrafo.classList.add("print-comentario__remove")
-            span.classList.remove("print-span")
-            span.classList.add("print-span__remove")
-            editarTarefa.classList.remove("editar-tarefa__p")
-            editarTarefa.classList.add("editar-tarefa__p-remove")
+        
+        // FUNÇÃO PARA ADICIONAR O EDITAR
+        // editarTarefa.addEventListener("click", function(){
+        //     if(editarTarefa){
+        //     paragrafo.classList.remove("print-comentario")
+        //     paragrafo.classList.add("print-comentario__remove")
+        //     span.classList.remove("print-span")
+        //     span.classList.add("print-span__remove")
+        //     editarTarefa.classList.remove("editar-tarefa__p")
+        //     editarTarefa.classList.add("editar-tarefa__p-remove")
             
-            const editarInput = document.createElement("input")
-            editarInput.setAttribute("type", "text")
-            editarInput.classList.add("editar-tarefa__input")
-            div.appendChild(editarInput)
+        //     const editarInput = document.createElement("input")
+        //     editarInput.setAttribute("type", "text")
+        //     editarInput.classList.add("editar-tarefa__input")
+        //     div.appendChild(editarInput)
 
-            paragrafo.textContent = editarInput.value
-            paragrafo.classList.add("print-comentario")
-            } 
-        })      
-
+        //     paragrafo.textContent = editarInput.value
+        //     paragrafo.classList.add("print-comentario")
+        //     } 
+        // })
     }
 })

@@ -221,3 +221,8 @@ select > option {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
 }
+
+.etiquetas {
+    font-weight: bold;
+    color: #ba7af8;
+}
