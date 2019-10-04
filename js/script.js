@@ -75,30 +75,6 @@ form.addEventListener("submit", function(evento){
             if(btnApaga){
                 div.classList.add("print-div__remove")
             } 
-        })   
-
-        editarTarefa.addEventListener("dblclick", function(){
-            paragrafo.setAttribute("contentEditable", "true")
         })
-        
-        // FUNÇÃO PARA ADICIONAR O EDITAR
-        // editarTarefa.addEventListener("click", function(){
-        //     if(editarTarefa){
-        //     paragrafo.classList.remove("print-comentario")
-        //     paragrafo.classList.add("print-comentario__remove")
-        //     span.classList.remove("print-span")
-        //     span.classList.add("print-span__remove")
-        //     editarTarefa.classList.remove("editar-tarefa__p")
-        //     editarTarefa.classList.add("editar-tarefa__p-remove")
-            
-        //     const editarInput = document.createElement("input")
-        //     editarInput.setAttribute("type", "text")
-        //     editarInput.classList.add("editar-tarefa__input")
-        //     div.appendChild(editarInput)
-
-        //     paragrafo.textContent = editarInput.value
-        //     paragrafo.classList.add("print-comentario")
-        //     } 
-        // })
     }
 })

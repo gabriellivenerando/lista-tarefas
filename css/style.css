@@ -87,6 +87,8 @@ body{
     text-align: left;
     font-size: 12px;
     cursor: pointer;
+    width: 130px;
+    word-break: break-word;
 }
 
 .print-comentario__concluido {
@@ -166,10 +168,9 @@ body{
     cursor: pointer;
 }
 
-.editar-tarefa__p-remove {
-    display: none;
+.editar-tarefa__p-ativado{
+    color: #ff0000;
 }
-
 .editar-tarefa__div {
     align-items: center;
     display: flex;
@@ -210,11 +211,10 @@ select {
     border: none;
     width: 90%;
     border-radius: 5px;
-    font-weight: bold;
-    color: white;
+    color: black;
     padding: 4px;
     font-size: 14px;
-    background-color: #ba7af8;
+    background-color: #c7c7c7;
 }
 
 select > option {
@@ -226,3 +226,4 @@ select > option {
     font-weight: bold;
     color: #ba7af8;
 }
+
