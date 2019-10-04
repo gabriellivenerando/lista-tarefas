@@ -214,7 +214,8 @@ select {
     color: black;
     padding: 4px;
     font-size: 14px;
-    background-color: #c7c7c7;
+    background-color: #ffffff;
+    border: 1px solid #ba7af8;
 }
 
 select > option {
