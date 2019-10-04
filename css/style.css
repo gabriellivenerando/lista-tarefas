@@ -91,6 +91,17 @@ body{
     word-break: break-word;
 }
 
+/* .print-comentario:before{
+    content: '';
+    display: flex;
+    width: 23px;
+    height: 23px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid #AB94B0;
+    transition: background .2s ease-in;
+} */
+
 .print-comentario__concluido {
     color: grey;
     text-decoration: line-through;
@@ -98,6 +109,10 @@ body{
     font-size: 12px;  
     width: 130px;
     word-break: break-word;
+}
+
+.print-salvar{
+    color: red;
 }
 
 .print-span {
@@ -127,6 +142,7 @@ body{
 
 .btn-apaga-tudo {
     font-size: 12px;
+    cursor: pointer;
 }
 
 .btn-apaga-tudo::before{

@@ -76,5 +76,22 @@ form.addEventListener("submit", function(evento){
                 div.classList.add("print-div__remove")
             } 
         })
+
+        editarTarefa.addEventListener("click", function(){
+            if(editarTarefa.textContent == "editar"){
+                paragrafo.setAttribute("contentEditable", "true")
+                paragrafo.style.textDecoration = "none"
+                paragrafo.style.color = "black"
+                editarTarefa.style.color = "red"
+                editarTarefa.textContent = "salvar"
+            } else {
+                paragrafo.setAttribute("contentEditable", "false")
+                editarTarefa.textContent = "editar"
+                editarTarefa.style.color = "grey"
+                paragrafo.addEventListener("click", function(){
+                })
+            }
+        })
+
     }
 })
