@@ -5,7 +5,6 @@ const btnApaga = document.getElementById("btnApaga")
 const btnFeito = document.getElementById("btnFeito")
 const divDrag = document.getElementById("drag")
 
-
 form.addEventListener("submit", function(evento){
     evento.preventDefault()
 
@@ -78,7 +77,7 @@ form.addEventListener("submit", function(evento){
         })
 
         editarTarefa.addEventListener("click", function(){
-            if(editarTarefa.textContent == "editar"){
+            if(editarTarefa.textContent === "editar"){
                 paragrafo.setAttribute("contentEditable", "true")
                 paragrafo.style.textDecoration = "none"
                 paragrafo.style.color = "black"
@@ -93,5 +92,30 @@ form.addEventListener("submit", function(evento){
             }
         })
 
+        //drag and drop
+        div.setAttribute("draggable", true)
+        divDrag.setAttribute("draggable", true)
+        divDrag.className = "div-drag"
+
+        div.addEventListener("dragstart", onDragStart)
+        div.addEventListener("dragover", onDragOver)
+        div.addEventListener("dragend", onDragEnd)
     }
 })
+
+let dragging = null;
+
+function onDragStart(ev) {
+    dragging = ev.target.closest(".print-div")
+}
+
+function onDragOver(ev) {
+    ev.stopPropagation()
+    const node = ev.target.closest(".print-div")
+    console.log(this);
+    this.parentNode.insertBefore(dragging, node)
+}
+
+function onDragEnd(ev) {
+    dragging = null
+}
