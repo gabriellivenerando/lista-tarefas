@@ -96,6 +96,8 @@ body{
     text-decoration: line-through;
     cursor: pointer;
     font-size: 12px;  
+    width: 130px;
+    word-break: break-word;
 }
 
 .print-span {
